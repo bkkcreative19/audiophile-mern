@@ -1,0 +1,69 @@
+.hero {
+  background: #191919;
+  height: 80vh;
+  position: relative;
+
+  & nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    height: 100%;
+  }
+
+  &__content {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+    color: $white;
+
+    & h3 {
+      font-size: 1.4rem;
+      opacity: 0.5;
+      text-transform: uppercase;
+      letter-spacing: 1rem;
+      margin-top: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    & h1 {
+      font-size: 5.6rem;
+      line-height: 5.5rem;
+      font-weight: 700;
+    }
+
+    & p {
+      font-size: 1.4rem;
+      line-height: 2.3rem;
+      opacity: 0.75;
+      font-weight: 500;
+      width: 80%;
+      margin: 1rem 0 2.5rem 0;
+    }
+
+    & button {
+      width: 30%;
+      padding: 1rem 0;
+      background: $primary-orange;
+      color: $white;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        background: $secondary-orange;
+      }
+    }
+  }
+
+  &__image {
+    flex: 2.5;
+    background: url("../../../assets/assets/home/desktop/image-hero.jpg") right
+      no-repeat;
+    background-size: cover;
+  }
+}

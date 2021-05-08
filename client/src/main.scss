@@ -1,0 +1,8 @@
+// global stylesheets
+
+@import "./styles/variables.scss";
+@import "./styles/globals.scss";
+
+// component stylesheets
+@import "./components/Nav/Nav.scss";
+@import "./components/HomeComponents/Hero/Hero.scss";
