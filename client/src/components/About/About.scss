@@ -1,0 +1,36 @@
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10rem 0;
+
+  & .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & h1 {
+      font-size: 4rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      width: 65%;
+      line-height: 4.5rem;
+
+      & span {
+        color: $primary-orange;
+      }
+    }
+
+    & p {
+      font-size: 1.5rem;
+      font-weight: 500;
+      opacity: 0.5;
+      width: 80%;
+      margin-top: 1.3rem;
+    }
+  }
+
+  & .img img {
+    border-radius: 1.2rem;
+    width: 100%;
+  }
+}
