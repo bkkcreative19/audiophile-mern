@@ -5,9 +5,14 @@
 
 // component stylesheets
 @import "./components/Nav/Nav.scss";
-
-// Home
-@import "./components/HomeComponents/Hero/Hero.scss";
-@import "./components/HomeComponents/HomeCategories/HomeCategories.scss";
-@import "./components/HomeComponents/HomePromos/HomePromos.scss";
 @import "./components/Footer/Footer.scss";
+@import "./components/CategorieSelection/CategorieSelection.scss";
+
+// HomePage
+@import "./components/HomeComponents/Hero/Hero.scss";
+@import "./components/HomeComponents/HomePromos/HomePromos.scss";
+
+// CategoryPage
+@import "./components/CategoryComponents/Banner/Banner.scss";
+@import "./components/CategoryComponents/ProductList/ProductList.scss";
+@import "./components/CategoryComponents/Product/Product.scss";

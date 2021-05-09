@@ -59,6 +59,11 @@
       text-transform: uppercase;
       font-weight: 600;
       margin-top: 3rem;
+
+      &:hover {
+        background: $secondary-black;
+        color: $white;
+      }
     }
   }
 
@@ -92,6 +97,11 @@
         text-transform: uppercase;
         font-weight: 600;
         margin-top: 3rem;
+
+        &:hover {
+          background: $secondary-black;
+          color: $white;
+        }
       }
     }
   }

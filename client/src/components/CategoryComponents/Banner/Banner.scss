@@ -1,0 +1,13 @@
+.banner {
+  background: $secondary-black;
+
+  & h1 {
+    text-transform: uppercase;
+    color: $white;
+    font-weight: bold;
+    font-size: 4rem;
+    text-align: center;
+    padding: 8rem 0;
+    letter-spacing: 0.3rem;
+  }
+}

@@ -11,13 +11,13 @@ const Nav = () => {
         <Link to="/">
           <li className="nav__list-item">Home</li>
         </Link>
-        <Link to="/headphones">
+        <Link to="/category/headphones">
           <li className="nav__list-item">Headphones</li>
         </Link>
-        <Link to="/speakers">
+        <Link to="/category/speakers">
           <li className="nav__list-item">Speakers</li>
         </Link>
-        <Link to="/ear-phones">
+        <Link to="/category/earphones">
           <li className="nav__list-item">Earphones</li>
         </Link>
       </ul>
