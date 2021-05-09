@@ -7,7 +7,7 @@ import Speakers from "../../../assets/assets/shared/desktop/image-speakers.png";
 
 const HomeCategories = () => {
   return (
-    <div className="home-categories container">
+    <section className="home-categories container">
       <div className="cards">
         <div className="card">
           <img src={Headphones} alt="" />
@@ -40,7 +40,7 @@ const HomeCategories = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

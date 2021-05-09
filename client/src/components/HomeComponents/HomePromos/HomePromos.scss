@@ -1,0 +1,98 @@
+.home-promos {
+  & .zx9-speaker {
+    border-radius: 1.2rem;
+    position: relative;
+    margin: 2rem 0;
+    padding: 6rem 0;
+    z-index: 1000;
+    overflow: hidden;
+    display: flex;
+
+    & .pattern {
+      height: 944px;
+      position: absolute;
+      top: -3rem;
+      left: -9rem;
+    }
+
+    & img {
+      position: relative;
+      bottom: -8rem;
+      left: 18rem;
+      height: 493px;
+      z-index: -19;
+    }
+
+    & .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    background: $primary-orange;
+
+    display: flex;
+  }
+
+  & .zx7-speaker {
+    border-radius: 1.2rem;
+    margin: 4rem 0;
+    background: url("../../../assets/assets/home/desktop/image-speaker-zx7.jpg")
+      no-repeat;
+    background-size: cover;
+    background-position: center right;
+    padding: 10rem 8rem;
+
+    & h3 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    & .btn {
+      background: transparent;
+      border: 2px solid black;
+      padding: 1.2rem 3.5rem;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-top: 3rem;
+    }
+  }
+
+  & .yx1-ear-phones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    & img {
+      border-radius: 1.2rem;
+    }
+
+    & .content {
+      border-radius: 1.2rem;
+      background: $primary-dark-gray;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 6rem;
+
+      & h3 {
+        font-size: 2.8rem;
+        font-weight: bold;
+      }
+
+      & .btn {
+        padding: 1.2rem 0;
+        background: transparent;
+        border: 2px solid black;
+        width: 30%;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-top: 3rem;
+      }
+    }
+  }
+}

@@ -5,7 +5,7 @@ import bgImage from "../../../assets/assets/home/desktop/image-hero.jpg";
 
 const Hero = () => {
   return (
-    <div className="hero">
+    <section className="hero">
       <Nav />
       <div className="hero__wrapper container">
         <div className="hero__content">
@@ -19,7 +19,7 @@ const Hero = () => {
         </div>
         <div className="hero__image">hi</div>
       </div>
-    </div>
+    </section>
   );
 };
 
