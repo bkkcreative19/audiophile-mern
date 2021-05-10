@@ -1,5 +1,5 @@
 nav {
-  background: transparent;
+  background: #000000;
 
   padding: 2.5rem 0 3rem;
   align-items: center;
@@ -16,13 +16,13 @@ nav {
 
     & li {
       font-size: 1.3rem;
-      color: $white;
+      color: #fff;
       font-weight: bold;
       margin-right: 4rem;
       text-transform: uppercase;
 
       &:hover {
-        color: $primary-orange;
+        color: #d87d4a;
       }
     }
 

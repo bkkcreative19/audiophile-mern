@@ -1,0 +1,47 @@
+.features {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  padding: 8rem 0;
+
+  & h3 {
+    font-size: 3.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+  }
+
+  & .description {
+    font-size: 1.5rem;
+    font-weight: 500;
+
+    & p {
+      opacity: 0.5;
+    }
+  }
+
+  & .in-the-box {
+    padding-left: 14rem;
+    & .list {
+      display: flex;
+      flex-direction: column;
+
+      & .qty {
+        color: $primary-orange;
+      }
+
+      & .item {
+        color: $secondary-black;
+        margin-left: 1.5rem;
+      }
+
+      & span {
+        font-size: 1.5rem;
+        font-weight: 500;
+
+        &:not(:first-child) {
+          margin-top: 1.4rem;
+        }
+      }
+    }
+  }
+}

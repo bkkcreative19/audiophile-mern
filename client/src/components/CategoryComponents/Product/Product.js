@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import image from "./product-yx1-earphones/desktop/image-product.jpg";
 
 const Product = ({ product }) => {
@@ -26,7 +27,9 @@ const Product = ({ product }) => {
           <h3>New product</h3>
           <h1>{product.name}</h1>
           <p>{product.description}</p>
-          <button>See Product</button>
+          <Link to={`/product/${product.name}`}>
+            <button>See Product</button>
+          </Link>
         </div>
       </div>
     </div>

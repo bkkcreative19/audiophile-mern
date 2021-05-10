@@ -1,0 +1,93 @@
+.details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 8rem 0;
+
+  & .image {
+    & img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  & .content {
+    display: flex;
+    flex-direction: column;
+
+    &-container {
+      margin-top: 7rem;
+      margin-left: 10rem;
+
+      & h3 {
+        font-size: 1.4rem;
+        color: $primary-orange;
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+      }
+
+      & h1 {
+        font-weight: bold;
+        font-size: 4rem;
+        line-height: 4rem;
+        margin: 1.8rem 0;
+      }
+
+      & p {
+        font-size: 1.5rem;
+        font-weight: 500;
+        opacity: 0.5;
+      }
+
+      & .price {
+        display: inline-block;
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin: 3rem 0;
+      }
+    }
+
+    & .add-to-cart {
+      display: flex;
+      align-items: center;
+
+      & .quantity {
+        padding: 1.3rem 2.5rem;
+        background: $primary-dark-gray;
+        display: flex;
+        justify-content: space-between;
+        width: 12rem;
+
+        & span {
+          display: inline-block;
+          font-size: 1.3rem;
+          font-weight: bold;
+
+          &:first-child,
+          &:last-child {
+            opacity: 0.25;
+            cursor: pointer;
+
+            &:hover {
+              color: $primary-orange;
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      & button {
+        width: 30%;
+        padding: 1.3rem 0;
+        background: $primary-orange;
+        color: $white;
+        border: none;
+        cursor: pointer;
+        margin-left: 2rem;
+
+        &:hover {
+          background: $secondary-orange;
+        }
+      }
+    }
+  }
+}

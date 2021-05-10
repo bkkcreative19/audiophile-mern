@@ -2,8 +2,8 @@ import React from "react";
 import Logo from "../../assets/assets/shared/desktop/logo.svg";
 import { Link } from "react-router-dom";
 import Cart from "../../assets/assets/shared/desktop/icon-cart.svg";
-
-const Nav = () => {
+import "./Nav2.scss";
+const Nav2 = () => {
   return (
     <nav className="nav">
       <div className="wrapper container">
@@ -28,4 +28,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default Nav2;
