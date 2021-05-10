@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import Logo from "../../assets/assets/shared/desktop/logo.svg";
 import { Link } from "react-router-dom";
 import Cart from "../../assets/assets/shared/desktop/icon-cart.svg";
+import { Context } from "../../context/Context";
 import "./Nav2.scss";
 const Nav2 = () => {
+  const { isOpen, setIsOpen } = useContext(Context);
+
   return (
     <nav className="nav">
       <div className="wrapper container">
@@ -22,7 +25,12 @@ const Nav2 = () => {
             <li className="nav__list-item">Earphones</li>
           </Link>
         </ul>
-        <img src={Cart} alt="cart" className="nav__cart" />
+        <img
+          onClick={() => setIsOpen(!isOpen)}
+          src={Cart}
+          alt="cart"
+          className="cart"
+        />
       </div>
     </nav>
   );

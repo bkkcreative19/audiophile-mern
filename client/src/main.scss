@@ -3,7 +3,7 @@
 @import "./styles/variables.scss";
 @import "./styles/globals.scss";
 
-// component stylesheets
+// Common component stylesheets
 @import "./components/Nav/Nav.scss";
 @import "./components/Footer/Footer.scss";
 @import "./components/CategorieSelection/CategorieSelection.scss";
@@ -23,3 +23,7 @@
 @import "./components/ProductDetailComponents/Features/Features.scss";
 @import "./components/ProductDetailComponents/Gallery/Gallery.scss";
 @import "./components/ProductDetailComponents/Suggestions/Suggestions.scss";
+
+// Cart
+@import "./components/Cart/Cart.scss";
+@import "./components/Cart/CartItem/CartItem.scss";

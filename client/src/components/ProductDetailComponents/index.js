@@ -12,6 +12,7 @@ const ProductDetailComponents = ({ product }) => {
   return (
     <>
       <Nav2 />
+
       <Details product={product} />
       <Features product={product} />
       <Gallery />
