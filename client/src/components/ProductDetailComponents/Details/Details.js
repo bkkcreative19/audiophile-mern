@@ -2,19 +2,18 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import Image from "../../../assets/assets/product-xx99-mark-two-headphones/desktop/image-product.jpg";
 
-const Details = ({ product }) => {
+const Details = ({ product, addToCart }) => {
   const [quantity, setQuantity] = useState(1);
   const history = useHistory();
-  console.log(history);
 
   return (
     <div className="container">
-      <Link onClick={history.goBack} className="go-back">
+      <a onClick={history.goBack} className="go-back">
         Go Back
-      </Link>
+      </a>
       <div className="details">
         <div className="image">
-          <img src={Image} alt="product" />
+          <img src={product.image} alt="product" />
         </div>
         <div className="content">
           <div className="content-container">
@@ -24,11 +23,23 @@ const Details = ({ product }) => {
             <span className="price">${product.price}</span>
             <div className="add-to-cart">
               <div className="quantity">
-                <span className="minus">-</span>
+                <span
+                  onClick={() => setQuantity(quantity - 1)}
+                  className="minus"
+                >
+                  -
+                </span>
                 <span className="amount">{quantity}</span>
-                <span className="plus">+</span>
+                <span
+                  onClick={() => setQuantity(quantity + 1)}
+                  className="plus"
+                >
+                  +
+                </span>
               </div>
-              <button className="add">Add To Cart</button>
+              <button onClick={() => addToCart(quantity)} className="add">
+                Add To Cart
+              </button>
             </div>
           </div>
         </div>

@@ -13,7 +13,7 @@ const Product = ({ product }) => {
       className="product"
     >
       <div className="product__image">
-        <img src={image} alt="product" />
+        <img src={product.image} alt="product" />
       </div>
       <div
         style={

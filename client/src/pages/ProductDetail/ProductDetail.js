@@ -9,7 +9,7 @@ const ProductDetail = () => {
 
   useEffect(() => {
     const product = data.find((item) => item.name === params.name);
-    console.log(product);
+
     setProduct(product);
   }, [params.name]);
 

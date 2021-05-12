@@ -27,3 +27,9 @@
 // Cart
 @import "./components/Cart/Cart.scss";
 @import "./components/Cart/CartItem/CartItem.scss";
+
+// CheckOut
+@import "./components/CheckoutComponents/CheckoutForm/CheckoutForm.scss";
+@import "./components/CheckoutComponents/CheckoutForm/CheckoutModal/CheckoutModal.scss";
+@import "./components/CheckoutComponents/Summary/Summary.scss";
+@import "./components/CheckoutComponents/Summary/SummaryItem/SummaryItem.scss";

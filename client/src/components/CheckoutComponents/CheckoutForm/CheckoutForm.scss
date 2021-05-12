@@ -1,0 +1,164 @@
+.checkout-wrapper {
+  display: flex;
+  gap: 2rem;
+
+  & .checkout-form {
+    background: $white;
+    border-radius: 1.3rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.075);
+    flex: 2.7;
+    padding: 4rem;
+
+    & h1 {
+      font-size: 3.2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 2rem 0;
+    }
+
+    & input {
+      padding: 2rem;
+      border-radius: 1rem;
+      border: 1px solid #cfcfcf;
+    }
+
+    & label {
+      display: inline-block;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 1.2rem;
+    }
+
+    & h3 {
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: $primary-orange;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      margin-top: 8rem;
+    }
+
+    & .billing {
+      & input {
+        width: 100%;
+      }
+
+      & .email {
+        margin-left: 2rem;
+      }
+
+      & .phone {
+        margin-top: 2.5rem;
+      }
+
+      & .billing-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    & .shipping {
+      & .address {
+        & input {
+          width: 100%;
+        }
+      }
+
+      & .zip-and-city-country {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-top: 2.5rem;
+
+        & div {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      & .country {
+        // display: flex;
+        // flex-direction: column;
+        // width: 49%;
+      }
+    }
+
+    & .payment {
+      & .payment-method {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        & .options {
+          & .cash-on-delivery {
+            margin-top: 2rem;
+          }
+          & div {
+            padding: 1.8rem;
+            border-radius: 1rem;
+            border: 1px solid #cfcfcf;
+            display: flex;
+            align-items: center;
+
+            & input[type="radio"] {
+              /* remove standard background appearance */
+
+              appearance: none;
+              /* create custom radiobutton appearance */
+              display: inline-block;
+              width: 25px;
+              height: 25px;
+              padding: 5px;
+
+              background-clip: content-box;
+              border: 1px solid #bbbbbb;
+
+              border-radius: 50%;
+            }
+
+            & input[type="radio"]:checked {
+              background-color: $primary-orange;
+            }
+
+            & label {
+              margin-bottom: 0;
+              font-size: 1.4rem;
+              font-weight: bold;
+              margin-left: 1.3rem;
+            }
+          }
+        }
+      }
+
+      & .emony-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-top: 4rem;
+
+        & div {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+
+  .cash-on {
+    font-size: 1.5rem;
+    font-weight: 500;
+    opacity: 0.5;
+    margin-top: 3rem;
+  }
+
+  & .summary {
+    border-radius: 1.3rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.075);
+    flex: 1.3;
+  }
+}
+
+.full {
+  position: fixed;
+  background-color: red;
+  height: 100vh;
+}

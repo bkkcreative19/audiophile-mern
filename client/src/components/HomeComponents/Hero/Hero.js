@@ -6,7 +6,6 @@ import bgImage from "../../../assets/assets/home/desktop/image-hero.jpg";
 const Hero = () => {
   return (
     <section className="hero">
-      <Nav />
       <div className="hero__wrapper container">
         <div className="hero__content">
           <h3>New product</h3>
