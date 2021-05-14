@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
-import Image from "../../../assets/assets/product-xx99-mark-two-headphones/desktop/image-product.jpg";
+import { useHistory } from "react-router-dom";
 
-const Details = ({ product, addToCart }) => {
-  const [quantity, setQuantity] = useState(1);
+const Details = ({ product, handleCart, isDisabled }) => {
+  const [quantity, setQuantity] = useState(0);
   const history = useHistory();
 
   return (
@@ -37,7 +36,11 @@ const Details = ({ product, addToCart }) => {
                   +
                 </span>
               </div>
-              <button onClick={() => addToCart(quantity)} className="add">
+              <button
+                disabled={isDisabled && "true"}
+                onClick={() => handleCart(quantity)}
+                className="add"
+              >
                 Add To Cart
               </button>
             </div>

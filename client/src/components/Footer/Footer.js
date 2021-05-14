@@ -24,20 +24,23 @@ const Footer = () => {
             <Link to="/">
               <li className="right__list-item">Home</li>
             </Link>
-            <Link to="/headphones">
+            <Link to="/category/headphones">
               <li className="right__list-item">Headphones</li>
             </Link>
-            <Link to="/speakers">
+            <Link to="/category/speakers">
               <li className="right__list-item">Speakers</li>
             </Link>
-            <Link to="/ear-phones">
+            <Link to="/category/ear-phones">
               <li className="right__list-item">Earphones</li>
             </Link>
           </ul>
           <div className="social-logos">
-            <img src={Facebook} alt="facebook" />
-            <img src={Twitter} alt="twitter" />
-            <img src={Instagram} alt="instagram" />
+            {/* <img src={Facebook} alt="facebook" />
+            <img src={Twitter} alt="twitter" /> */}
+            <i className="fab fa-facebook-square"></i>
+            <i className="fab fa-twitter"></i>
+            <i className="fab fa-instagram"></i>
+            {/* <img src={Instagram} alt="instagram" /> */}
           </div>
         </div>
       </div>

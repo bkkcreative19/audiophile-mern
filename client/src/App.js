@@ -11,12 +11,10 @@ import { useContext } from "react";
 import { Context } from "./context/Context";
 import Checkout from "./pages/Checkout/Checkout";
 import Nav from "./components/Nav/Nav";
-import Nav2 from "./components/Nav2/Nav2";
 
 const App = () => {
   const { isOpen, setIsOpen } = useContext(Context);
   const closeMenu = () => {
-    console.log(isOpen);
     setIsOpen(false);
   };
 

@@ -1,10 +1,17 @@
 import React, { useContext } from "react";
-import Image from "../../../../assets/assets/product-xx99-mark-one-headphones/desktop/image-product.jpg";
-import { Context } from "../../../../context/Context";
+
+import { useHistory } from "react-router-dom";
+import { Context } from "../../../context/Context";
 
 const CheckoutModal = ({ grandTotal }) => {
-  const { cart } = useContext(Context);
+  const { cart, setCart } = useContext(Context);
+  const history = useHistory();
   console.log(cart);
+
+  const backHome = () => {
+    setCart([]);
+    history.push("/");
+  };
   // if (isOpen) {
   //   document.addEventListener("click", closeMenu);
   // }
@@ -25,12 +32,12 @@ const CheckoutModal = ({ grandTotal }) => {
               <>
                 <div className="summary-item">
                   <div className="image">
-                    <img src={Image} alt="summary-item" />
+                    <img src={cart[0].image} alt="summary-item" />
                   </div>
 
                   <div className="info">
                     <h3>{cart[0].name}</h3>
-                    <span>{cart[0].price}</span>
+                    <span>${cart[0].price}</span>
                   </div>
 
                   <span className="quantity">x{cart[0].quantity}</span>
@@ -51,7 +58,9 @@ const CheckoutModal = ({ grandTotal }) => {
             <p className="price">${grandTotal}</p>
           </div>
         </div>
-        <button className="pay">Back to Home</button>
+        <button onClick={backHome} className="pay">
+          Back to Home
+        </button>
       </div>
     </div>
   );

@@ -1,11 +1,21 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
-import data from "../../data.json";
 import CartItem from "./CartItem/CartItem";
 
 const Cart = () => {
-  const { cart, setCart, setIsOpen } = useContext(Context);
+  const { cart, setCart, setIsOpen, clearCart } = useContext(Context);
+
+  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+  let priceItems = [];
+  let total = 0;
+
+  if (cart.length > 0) {
+    priceItems = cart.map((item) => item.price * item.quantity);
+
+    total = priceItems.reduce(reducer);
+  }
 
   // onClick={() => setIsOpen(false)}
   return (
@@ -16,7 +26,7 @@ const Cart = () => {
             Cart <span>({cart.length})</span>
           </h2>
           <span onClick={() => setIsOpen(false)}>x</span>
-          <a onClick={() => setCart([])} href="#">
+          <a onClick={clearCart} href="#">
             Remove all
           </a>
         </div>
@@ -27,7 +37,7 @@ const Cart = () => {
         </div>
         <div className="total">
           <span>Total</span>
-          <span>$5345</span>
+          <span>${total}</span>
         </div>
         <Link to="/checkout">
           <button onClick={() => setIsOpen(false)} className="checkout-btn">

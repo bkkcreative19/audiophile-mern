@@ -1,7 +1,6 @@
 import React from "react";
 
 import ZX9 from "../../../assets/assets/home/desktop/image-speaker-zx9.png";
-import ZX7 from "../../../assets/assets/home/desktop/image-speaker-zx7.jpg";
 import EarPhones from "../../../assets/assets/home/desktop/image-earphones-yx1.jpg";
 import Pattern from "../../../assets/assets/home/desktop/pattern-circles.svg";
 

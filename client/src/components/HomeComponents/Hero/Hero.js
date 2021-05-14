@@ -1,7 +1,4 @@
 import React from "react";
-import Nav from "../../Nav/Nav";
-
-import bgImage from "../../../assets/assets/home/desktop/image-hero.jpg";
 
 const Hero = () => {
   return (

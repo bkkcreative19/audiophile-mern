@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import Summary from "../Summary/Summary";
-import CheckoutModal from "./CheckoutModal/CheckoutModal";
+import CheckoutModal from "../CheckoutModal/CheckoutModal";
 
 const CheckoutForm = ({ cart }) => {
   const [selected, setSelected] = useState("e-money");
@@ -11,14 +11,10 @@ const CheckoutForm = ({ cart }) => {
     setSelected(e.target.value);
   };
 
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
-
   const handleClick = () => {
     setIsOpen(true);
-    const checkout = document.querySelector(".checkout");
-    checkout.addEventListener("click", closeMenu);
+    // const checkout = document.querySelector(".checkout");
+    // checkout.addEventListener("click", closeMenu);
   };
 
   const reducer = (accumulator, currentValue) => accumulator + currentValue;

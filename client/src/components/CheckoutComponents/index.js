@@ -7,7 +7,6 @@ const CheckoutComponents = () => {
   const { cart } = useContext(Context);
   return (
     <div className="checkout">
-      {/* <Nav2 /> */}
       <CheckoutForm cart={cart} />
     </div>
   );
