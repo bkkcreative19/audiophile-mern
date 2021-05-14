@@ -22,9 +22,9 @@ const App = () => {
 
   return (
     <>
-      <Nav2 />
+      <Nav />
       {isOpen && <Cart />}
-      <div onClick={closeMenu} className="wrapper">
+      <div onClick={closeMenu} className={isOpen ? "wrapper" : ""}>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/category/:name" component={Category} />

@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import image from "./product-yx1-earphones/desktop/image-product.jpg";
 
 const Product = ({ product }) => {
+  let image;
   return (
     <div
       style={

@@ -5,7 +5,6 @@ const Features = ({ product }) => {
     <section className="features container">
       {product.features ? (
         <>
-          {" "}
           <div className="description">
             <h3>Features</h3>
             <p>{product.features.split("\n\n")[0]}</p>

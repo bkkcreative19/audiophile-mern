@@ -30,7 +30,9 @@ const Cart = () => {
           <span>$5345</span>
         </div>
         <Link to="/checkout">
-          <button className="checkout-btn">Checkout</button>
+          <button onClick={() => setIsOpen(false)} className="checkout-btn">
+            Checkout
+          </button>
         </Link>
       </div>
     </div>

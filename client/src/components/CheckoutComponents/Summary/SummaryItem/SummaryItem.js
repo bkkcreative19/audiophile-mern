@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "../../../../assets/assets/product-xx99-mark-one-headphones/desktop/image-product.jpg";
 
 const SummaryItem = ({ item }) => {
+  const [quantity, setQuantity] = useState(item.quantity);
+
+  useEffect(() => {
+    setQuantity(item.quantity);
+    console.log(item.quantity);
+  }, [item.quantity]);
+
   return (
     <div className="summary-item">
       <div className="image">
@@ -13,7 +20,7 @@ const SummaryItem = ({ item }) => {
         <span>${item.price}</span>
       </div>
 
-      <span className="quantity">x{item.quantity}</span>
+      <span className="quantity">x{quantity}</span>
     </div>
   );
 };

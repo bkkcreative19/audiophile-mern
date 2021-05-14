@@ -3,6 +3,12 @@
   height: 80vh;
   position: relative;
 
+  @media only screen and (max-width: 768px) {
+    background: url("../../../assets/assets/home/tablet/image-header.jpg")
+      bottom no-repeat;
+    background-size: cover;
+  }
+
   & nav {
     position: absolute;
     left: 0;
@@ -12,6 +18,11 @@
   &__wrapper {
     display: flex;
     height: 100%;
+
+    @media only screen and (max-width: 768px) {
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &__content {
@@ -21,6 +32,12 @@
     // align-items: center;
     justify-content: center;
     color: $white;
+
+    @media only screen and (max-width: 768px) {
+      align-items: center;
+      text-align: center;
+      flex: 4;
+    }
 
     & h3 {
       font-size: 1.4rem;
@@ -65,5 +82,9 @@
     background: url("../../../assets/assets/home/desktop/image-hero.jpg") right
       no-repeat;
     background-size: cover;
+
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
   }
 }

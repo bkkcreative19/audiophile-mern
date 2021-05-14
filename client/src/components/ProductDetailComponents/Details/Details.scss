@@ -3,6 +3,10 @@
   grid-template-columns: repeat(2, 1fr);
   padding: 0 0 8rem;
 
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   & .image {
     & img {
       height: 100%;
@@ -17,6 +21,10 @@
     &-container {
       margin-top: 7rem;
       margin-left: 10rem;
+
+      @media only screen and (max-width: 768px) {
+        margin-left: 0;
+      }
 
       & h3 {
         font-size: 1.4rem;

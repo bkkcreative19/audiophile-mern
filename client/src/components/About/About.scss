@@ -3,10 +3,20 @@
   grid-template-columns: repeat(2, 1fr);
   padding: 10rem 0;
 
+  @media only screen and (max-width: 900px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   & .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media only screen and (max-width: 900px) {
+      align-items: center;
+      text-align: center;
+      margin-top: 4rem;
+    }
 
     & h1 {
       font-size: 4rem;
@@ -29,8 +39,17 @@
     }
   }
 
+  & .img {
+    @media only screen and (max-width: 900px) {
+      order: -1;
+    }
+  }
+
   & .img img {
     border-radius: 1.2rem;
     width: 100%;
+
+    @media only screen and (max-width: 900px) {
+    }
   }
 }

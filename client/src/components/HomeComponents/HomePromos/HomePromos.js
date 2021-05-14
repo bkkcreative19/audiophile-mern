@@ -28,7 +28,10 @@ const HomePromos = () => {
         </div>
       </div>
       <div className="yx1-ear-phones">
-        <img src={EarPhones} alt="ear-phones" />
+        <div className="image">
+          <img src={EarPhones} alt="ear-phones" />
+        </div>
+
         <div className="content">
           <h3>YX1 earphones</h3>
           <button className="btn">See product</button>

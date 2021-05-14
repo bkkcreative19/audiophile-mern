@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "../../../assets/assets/product-xx59-headphones/desktop/image-product.jpg";
 
 const CartItem = ({ product }) => {
   const [quantity, setQuantity] = useState(product.quantity);
+
+  useEffect(() => {
+    product.quantity = quantity;
+  }, [quantity]);
+
   return (
     <div className="cart-item">
       <div className="image">

@@ -1,14 +1,3 @@
-.checkout-modal {
-  position: absolute;
-  top: 11rem;
-  right: 19rem;
-  background: $white;
-  padding: 3rem;
-  border-radius: 1.3rem;
-  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.178);
-  z-index: 1000;
-}
-
 .checkout-modal-wrapper {
   position: fixed;
   width: 100%;
@@ -17,4 +6,111 @@
   left: 0;
   z-index: 1000;
   background: rgba(0, 0, 0, 0.4);
+
+  & .checkout-modal {
+    position: absolute;
+    width: 54rem;
+
+    top: 16rem;
+    right: 50%;
+    transform: translateX(50%);
+    background: $white;
+    padding: 4rem;
+    border-radius: 1.3rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.178);
+    z-index: 1000;
+
+    @media only screen and (max-width: 768px) {
+      top: 1rem;
+      width: 90%;
+    }
+
+    & i {
+      background: $primary-orange;
+      border-radius: 50%;
+      padding: 1.5rem;
+      color: $white;
+      font-size: 2rem;
+    }
+
+    & h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      width: 27rem;
+      text-transform: uppercase;
+      margin: 3rem 0 1rem;
+    }
+
+    & p {
+      font-size: 1.5rem;
+      font-weight: 5000;
+      opacity: 0.5;
+      margin-bottom: 3rem;
+    }
+
+    & .item-showcase {
+      display: flex;
+
+      @media only screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+
+      & .items {
+        flex: 2.7;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #f1f1f1;
+        border-radius: 1.3rem 0 0 1.3rem;
+        padding: 1.4rem;
+
+        & .summary-item {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.116);
+          padding-bottom: 1.4rem;
+          margin-top: 1rem;
+        }
+
+        & .others {
+          margin-top: 1.3rem;
+          margin-bottom: 1rem;
+        }
+      }
+
+      & .grand-total {
+        border-radius: 0 1.3rem 1.3rem 0;
+        flex: 1.3;
+        background: #000000;
+        color: #fff;
+        padding: 2rem;
+
+        & h3 {
+          font-size: 1.5rem;
+          font-weight: 500;
+          text-transform: uppercase;
+          opacity: 0.5;
+          margin-top: 1.5rem;
+        }
+
+        & p {
+          opacity: 1;
+          font-size: 1.8rem;
+          font-weight: bold;
+          margin-top: 1.4rem;
+          margin-left: 0.6rem;
+        }
+      }
+    }
+    & .pay {
+      width: 100%;
+      background: $primary-orange;
+      padding: 1.3rem 0;
+      cursor: pointer;
+      color: $white;
+      border: none;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-top: 4rem;
+    }
+  }
 }

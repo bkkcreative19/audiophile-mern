@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image from "../../../../assets/assets/product-xx99-mark-one-headphones/desktop/image-product.jpg";
+import { Context } from "../../../../context/Context";
 
-const CheckoutModal = () => {
+const CheckoutModal = ({ grandTotal }) => {
+  const { cart } = useContext(Context);
+  console.log(cart);
   // if (isOpen) {
   //   document.addEventListener("click", closeMenu);
   // }
@@ -18,24 +21,34 @@ const CheckoutModal = () => {
 
         <div className="item-showcase">
           <div className="items">
-            <div className="summary-item">
-              <div className="image">
-                <img src={Image} alt="summary-item" />
-              </div>
+            {cart.length > 0 ? (
+              <>
+                <div className="summary-item">
+                  <div className="image">
+                    <img src={Image} alt="summary-item" />
+                  </div>
 
-              <div className="info">
-                <h3>XX99 MK II x 1</h3>
-                <span>$2,999</span>
-              </div>
+                  <div className="info">
+                    <h3>{cart[0].name}</h3>
+                    <span>{cart[0].price}</span>
+                  </div>
 
-              <span className="quantity">x1</span>
-            </div>
-            <p className="others">and 2 other item(s)</p>
+                  <span className="quantity">x{cart[0].quantity}</span>
+                </div>
+                <p className="others">
+                  {cart.length === 2
+                    ? `and ${cart.length - 1} other item`
+                    : `and ${cart.length - 1} other items`}
+                </p>{" "}
+              </>
+            ) : (
+              "nope"
+            )}
           </div>
 
           <div className="grand-total">
             <h3>Grand Total</h3>
-            <p>$5,526</p>
+            <p className="price">${grandTotal}</p>
           </div>
         </div>
         <button className="pay">Back to Home</button>

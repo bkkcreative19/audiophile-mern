@@ -21,6 +21,19 @@ const CheckoutForm = ({ cart }) => {
     checkout.addEventListener("click", closeMenu);
   };
 
+  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+  let priceItems = [];
+  let total = 0;
+  let grandTotal = 0;
+
+  if (cart.length > 0) {
+    priceItems = cart.map((item) => item.price * item.quantity);
+
+    total = priceItems.reduce(reducer);
+    grandTotal = priceItems.reduce(reducer) + 50 + 1097;
+  }
+
   const history = useHistory();
   return (
     <div className="checkout-test container">
@@ -120,8 +133,13 @@ const CheckoutForm = ({ cart }) => {
             )}
           </div>
         </section>
-        <Summary setIsOpen={handleClick} cart={cart} />
-        {isOpen && <CheckoutModal />}
+        <Summary
+          total={total}
+          grandTotal={grandTotal}
+          setIsOpen={handleClick}
+          cart={cart}
+        />
+        {isOpen && <CheckoutModal grandTotal={grandTotal} />}
       </div>
     </div>
   );

@@ -1,11 +1,17 @@
 .footer {
   background: $primary-black;
-  margin-top: 4rem;
+
   color: $white;
   padding: 5rem 0;
 
   &__container {
     display: flex;
+
+    @media only screen and (max-width: 760px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
 
     & .left,
     & .right {
@@ -35,6 +41,13 @@
       &__list {
         display: flex;
 
+        @media only screen and (max-width: 760px) {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          margin-top: 3rem;
+        }
+
         & li {
           font-size: 1.5rem;
           font-weight: bold;
@@ -48,11 +61,20 @@
 
         & a:not(:last-child) {
           margin-right: 2.3rem;
+
+          @media only screen and (max-width: 760px) {
+            margin-right: 0;
+            margin-bottom: 1.7rem;
+          }
         }
       }
 
       & .social-logos {
         margin-top: 9rem;
+
+        @media only screen and (max-width: 760px) {
+          margin-top: 4rem;
+        }
 
         & img:not(:last-child) {
           margin-right: 1.4rem;

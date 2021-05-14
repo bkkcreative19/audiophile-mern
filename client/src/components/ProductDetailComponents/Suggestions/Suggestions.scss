@@ -14,6 +14,16 @@
     width: 100%;
     display: flex;
     gap: 2.5rem;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    & .other:not(:first-child) {
+      @media only screen and (max-width: 768px) {
+        margin-top: 4rem;
+      }
+    }
     & .other {
       display: flex;
       flex-direction: column;

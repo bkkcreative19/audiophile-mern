@@ -1,21 +1,7 @@
 import React from "react";
 import SummaryItem from "./SummaryItem/SummaryItem";
 
-const Summary = ({ cart, setIsOpen }) => {
-  const reducer = (accumulator, currentValue) => accumulator + currentValue;
-  let priceItems = [];
-  let quantity = [];
-  let total = 0;
-  let grandTotal = 0;
-  if (cart.length > 0) {
-    priceItems = cart.map((item) => item.price);
-    quantity = cart.map((item) => item.quantity);
-    console.log(quantity);
-    total = priceItems.reduce(reducer);
-    total = total * quantity.reduce(reducer);
-    grandTotal = priceItems.reduce(reducer) + 50 + 1097;
-  }
-
+const Summary = ({ cart, setIsOpen, total, grandTotal }) => {
   return (
     <div className="summary">
       <h2>Summary</h2>

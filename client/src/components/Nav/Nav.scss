@@ -1,18 +1,52 @@
-nav {
-  background: transparent;
-  z-index: 10003;
+.nav {
+  background: #000000;
   padding: 2.5rem 0 3rem;
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.219);
+  z-index: 100444;
 
-  & .wrapper {
+  & .cart {
+    @media only screen and (max-width: 768px) {
+      margin-left: auto;
+    }
+  }
+
+  &__logo {
+    @media only screen and (max-width: 768px) {
+      margin-left: 4rem;
+    }
+  }
+
+  &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @media only screen and (max-width: 768px) {
+      justify-content: initial;
+      align-items: center;
+    }
+
+    & .hamburger {
+      color: #fff;
+      display: none;
+      font-size: 2rem;
+
+      @media only screen and (max-width: 768px) {
+        display: flex;
+        order: -1;
+        cursor: pointer;
+      }
+    }
   }
 
   & ul {
     display: flex;
     margin-right: 1.5rem;
+    align-items: center;
+
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
 
     & li {
       font-size: 1.3rem;
