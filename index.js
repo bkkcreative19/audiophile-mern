@@ -28,4 +28,4 @@ app.use("/api", productRouter);
 
 const PORT = process.env.PORT || 5001;
 
-app.listen(PORT, () => console.log(`listening on port ${port}`));
+app.listen(PORT, () => console.log(`listening on port ${PORT}`));
