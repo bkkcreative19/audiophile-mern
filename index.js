@@ -26,6 +26,6 @@ app.get("*", (req, res) => {
 });
 app.use("/api", productRouter);
 
-const port = process.env.PORT || 5001;
+const PORT = process.env.PORT || 5001;
 
-app.listen(port, () => console.log(`listening on port ${port}`));
+app.listen(PORT, () => console.log(`listening on port ${port}`));
