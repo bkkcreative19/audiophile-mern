@@ -1,6 +1,5 @@
 import React from "react";
-
-import Nav from "../../Nav/Nav";
+import PropTypes from "prop-types";
 
 const Banner = ({ name }) => {
   return (
@@ -8,6 +7,10 @@ const Banner = ({ name }) => {
       <h1>{name}</h1>
     </section>
   );
+};
+
+Banner.propTypes = {
+  name: PropTypes.string.isRequired,
 };
 
 export default Banner;

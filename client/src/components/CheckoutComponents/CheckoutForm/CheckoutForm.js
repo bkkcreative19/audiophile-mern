@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import Summary from "../Summary/Summary";
+import PropTypes from "prop-types";
 import CheckoutModal from "../CheckoutModal/CheckoutModal";
 
 const CheckoutForm = ({ cart }) => {
@@ -13,8 +14,6 @@ const CheckoutForm = ({ cart }) => {
 
   const handleClick = () => {
     setIsOpen(true);
-    // const checkout = document.querySelector(".checkout");
-    // checkout.addEventListener("click", closeMenu);
   };
 
   const reducer = (accumulator, currentValue) => accumulator + currentValue;
@@ -139,6 +138,10 @@ const CheckoutForm = ({ cart }) => {
       </div>
     </div>
   );
+};
+
+CheckoutForm.propTypes = {
+  cart: PropTypes.array.isRequired,
 };
 
 export default CheckoutForm;

@@ -13,4 +13,9 @@ const getProduct = async (req, res) => {
   res.json(product);
 };
 
-export { getProductsByCategory, getProduct };
+const getSuggestions = async (req, res) => {
+  const suggestions = await Product.find({ name: { $ne: req.params.name } });
+  res.json(suggestions.splice(0, 3));
+};
+
+export { getProductsByCategory, getProduct, getSuggestions };

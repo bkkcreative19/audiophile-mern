@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import { useHistory } from "react-router-dom";
 
 const Details = ({ product, handleCart, isDisabled }) => {
@@ -37,7 +38,7 @@ const Details = ({ product, handleCart, isDisabled }) => {
                 </span>
               </div>
               <button
-                disabled={isDisabled && "true"}
+                disabled={isDisabled && true}
                 onClick={() => handleCart(quantity)}
                 className="add"
               >
@@ -49,6 +50,12 @@ const Details = ({ product, handleCart, isDisabled }) => {
       </div>
     </div>
   );
+};
+
+Details.propTypes = {
+  product: PropTypes.object.isRequired,
+  handleCart: PropTypes.func.isRequired,
+  isDisabled: PropTypes.bool.isRequired,
 };
 
 export default Details;

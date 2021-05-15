@@ -1,9 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/assets/shared/desktop/logo.svg";
-import Facebook from "../../assets/assets/shared/desktop/icon-facebook.svg";
-import Instagram from "../../assets/assets/shared/desktop/icon-instagram.svg";
-import Twitter from "../../assets/assets/shared/desktop/icon-twitter.svg";
 
 const Footer = () => {
   return (
@@ -35,12 +32,9 @@ const Footer = () => {
             </Link>
           </ul>
           <div className="social-logos">
-            {/* <img src={Facebook} alt="facebook" />
-            <img src={Twitter} alt="twitter" /> */}
             <i className="fab fa-facebook-square"></i>
             <i className="fab fa-twitter"></i>
             <i className="fab fa-instagram"></i>
-            {/* <img src={Instagram} alt="instagram" /> */}
           </div>
         </div>
       </div>

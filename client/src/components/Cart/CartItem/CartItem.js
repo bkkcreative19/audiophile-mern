@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "../../../assets/assets/product-xx59-headphones/desktop/image-product.jpg";
+import PropTypes from "prop-types";
 
 const CartItem = ({ product }) => {
   const [quantity, setQuantity] = useState(product.quantity);
@@ -29,6 +30,10 @@ const CartItem = ({ product }) => {
       </div>
     </div>
   );
+};
+
+CartItem.propTypes = {
+  product: PropTypes.object.isRequired,
 };
 
 export default CartItem;

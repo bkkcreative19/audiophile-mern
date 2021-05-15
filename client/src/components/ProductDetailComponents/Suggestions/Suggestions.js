@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Image from "../../../assets/assets/shared/desktop/image-xx99-mark-one-headphones.jpg";
+import PropTypes from "prop-types";
 
 const Suggestions = ({ others }) => {
   return (
@@ -11,7 +11,7 @@ const Suggestions = ({ others }) => {
           ? others.map((item) => {
               return (
                 <div key={item.slug} className="other">
-                  <img src={Image} alt="" />
+                  <img src={item.image} alt="" />
                   <h3>{item.name}</h3>
                   <Link to={`/product/${item.name}`}>
                     <button>See Product</button>
@@ -23,6 +23,10 @@ const Suggestions = ({ others }) => {
       </div>
     </section>
   );
+};
+
+Suggestions.propTypes = {
+  others: PropTypes.array.isRequired,
 };
 
 export default Suggestions;

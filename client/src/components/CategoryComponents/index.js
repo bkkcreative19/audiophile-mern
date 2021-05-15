@@ -1,25 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import About from "../About/About";
 import CategorieSelection from "../CategorieSelection/CategorieSelection";
 import Banner from "./Banner/Banner";
 import { useParams } from "react-router-dom";
 import ProductList from "./ProductList/ProductList";
-import axios from "axios";
+import { Context } from "../../context/Context";
 
-const CategoryComponents = ({ name }) => {
-  const [products, setProducts] = useState([]);
+const CategoryComponents = () => {
+  const { fetchStuff, products } = useContext(Context);
   const params = useParams();
   useEffect(() => {
-    const fetchStuff = async () => {
-      const { data } = await axios.get(`/api/products/${params.name}`);
-      setProducts(data);
-    };
-
-    fetchStuff();
+    fetchStuff(params.name);
   }, [params.name]);
   return (
     <>
-      <Banner name={name} />
+      <Banner name={params.name} />
       <ProductList products={products} />
       <CategorieSelection />
       <About />

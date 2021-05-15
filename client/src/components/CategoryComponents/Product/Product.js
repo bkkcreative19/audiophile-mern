@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-const Product = ({ product }) => {
-  let image;
+const Product = ({ product, index }) => {
   return (
     <div
       style={
-        product.id % 2 !== 0
+        index % 2 !== 0
           ? { flexDirection: "row-reverse" }
           : { flexDirection: "row" }
       }
@@ -17,7 +17,7 @@ const Product = ({ product }) => {
       </div>
       <div
         style={
-          product.id % 2 !== 0
+          index % 2 !== 0
             ? { alignItems: "flex-start" }
             : { alignItems: "flex-end" }
         }
@@ -34,6 +34,10 @@ const Product = ({ product }) => {
       </div>
     </div>
   );
+};
+
+Product.propTypes = {
+  product: PropTypes.object.isRequired,
 };
 
 export default Product;

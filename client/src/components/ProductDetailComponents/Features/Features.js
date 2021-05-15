@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Features = ({ product }) => {
   return (
@@ -29,6 +30,10 @@ const Features = ({ product }) => {
       )}
     </section>
   );
+};
+
+Features.propTypes = {
+  product: PropTypes.object.isRequired,
 };
 
 export default Features;

@@ -6,12 +6,12 @@ import About from "../About/About";
 
 const HomeComponents = () => {
   return (
-    <div>
+    <>
       <Hero />
       <CategorieSelection />
       <HomePromos />
       <About />
-    </div>
+    </>
   );
 };
 
