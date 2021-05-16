@@ -10,6 +10,7 @@ const CategoryComponents = () => {
   const { fetchStuff, products } = useContext(Context);
   const params = useParams();
   useEffect(() => {
+   
     fetchStuff(params.name);
   }, [params.name]);
   return (
