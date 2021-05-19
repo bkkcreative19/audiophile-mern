@@ -65,7 +65,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][file:///C:/Users/bkkcr/Downloads/screencapture-localhost-3000-2021-05-19-11_43_18.pdf]](https://example.com)
+[![Product Name Screen Shot][]](https://images.unsplash.com/photo-1614270532514-904c3aa5628e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80)
 
 
 ### Built With
@@ -98,12 +98,7 @@
 
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 
 
