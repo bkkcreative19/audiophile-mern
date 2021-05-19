@@ -13,6 +13,12 @@ const CategoryComponents = () => {
    
     fetchStuff(params.name);
   }, [params.name]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+   
+  }, )
+
   return (
     <>
       <Banner name={params.name} />

@@ -1,20 +1,25 @@
 import React from "react";
-import Image1 from "../../../assets/assets/product-xx99-mark-two-headphones/desktop/image-gallery-1.jpg";
-import Image2 from "../../../assets/assets/product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg";
-import Image3 from "../../../assets/assets/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg";
+import PropTypes from 'prop-types'
 
-const Gallery = () => {
+const Gallery = ({product}) => {
+  // const {gallery} = product 
+  // console.log(product)
   return (
     <section className="gallery container">
-      <div className="left">
-        <img src={Image1} alt="image1" />
-        <img src={Image2} alt="image2" />
+      {product.gallery && <> <div className="left">
+        <img src={product.gallery.first} alt="image1" />
+        <img src={product.gallery.second} alt="image2" />
       </div>
       <div className="right">
-        <img src={Image3} alt="image3" />
-      </div>
+        <img src={product.gallery.third} alt="image3" />
+      </div></>}
+     
     </section>
   );
 };
+
+Gallery.propTypes = {
+  product: PropTypes.object.isRequired
+}
 
 export default Gallery;

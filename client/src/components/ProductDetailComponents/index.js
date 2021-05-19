@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import Details from "./Details/Details";
-
+import Skeleton from 'react-loading-skeleton';
 import Features from "./Features/Features";
 import Gallery from "./Gallery/Gallery";
 import Suggestions from "./Suggestions/Suggestions";
@@ -11,8 +11,9 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 const ProductDetailComponents = () => {
-  const [product, setProduct] = useState();
+  const [product, setProduct] = useState({});
   const [suggestions, setSuggestions] = useState([]);
+
   const params = useParams();
 
   const { setIsOpen, isOpen, addToCart, cart } = useContext(Context);
@@ -37,22 +38,31 @@ const ProductDetailComponents = () => {
   };
 
   useEffect(() => {
+    
     const fetchProduct = async () => {
-      const { data } = await axios.get(`/api/product/${params.name}`);
+      setProduct()
+      const { data } = await axios.get(`https://audiophile-server.herokuapp.com/api/product/${params.name}`);
       const suggestions = await axios.get(
-        `/api/product/suggestions/${params.name}`
+        `https://audiophile-server.herokuapp.com/api/product/suggestions/${params.name}`
       );
 
       setProduct(data);
       setSuggestions(suggestions.data);
+      // console.log(data.gallery)
+      // setGallery(data.gallery)
     };
 
     fetchProduct();
   }, [params.name]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+   
+  }, )
+
   return (
     <>
-      {product && (
+      {product ? (
         <>
           <Details
             isDisabled={checkIfDisabled()}
@@ -60,12 +70,12 @@ const ProductDetailComponents = () => {
             handleCart={handleCart}
           />
           <Features product={product} />
-          <Gallery />
+          <Gallery product={product} />
           <Suggestions others={suggestions} />
           <CategorieSelection />
           <About />
         </>
-      )}
+      ) : <Skeleton height={'100vh'}/>}
     </>
   );
 };

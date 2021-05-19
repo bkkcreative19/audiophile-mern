@@ -34,7 +34,8 @@ export const Provider = ({ children }) => {
   };
 
   const fetchStuff = async (name) => {
-    const { data } = await axios.get(`/api/products/${name}`);
+    setProducts([])
+    const { data } = await axios.get(`https://audiophile-server.herokuapp.com/api/products/${name}`);
     setProducts(data);
   };
 
